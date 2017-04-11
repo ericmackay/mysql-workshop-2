@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 mysql> SELECT * FROM Account;
 +----+-------+----------+---------------------+------------+
 | id | email | password | createdOn           | modifiedOn |
@@ -20,6 +21,8 @@ mysql> SELECT * FROM AddressBook;
 1 row in set (0.00 sec)
 
 
+=======
+>>>>>>> 0a75004d2ccc12e318ae5b47017ff43e05108349
 mysql> SELECT * FROM Entry;
 +----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
 | id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
@@ -29,7 +32,11 @@ mysql> SELECT * FROM Entry;
 1 row in set (0.00 sec)
 
 mysql> INSERT INTO Entry (addressBookId, firstName, lastName, birthday, type, subtype,
+<<<<<<< HEAD
     -> contentLineOne,contentLineTwo, contentLineThree, contentLineFour, contentLineFive) VALUES 
+=======
+    -> contentLineOne,contentLineTwo, contentLineThree, contentLineFour, contentLineFive) VALUES
+>>>>>>> 0a75004d2ccc12e318ae5b47017ff43e05108349
     -> ('2','ekksks','kasjd', '1987-08-01 00:00:00', 'home', 'phone', '5142970818', 'address2','address3','address4','address5'),
     -> ('3','as','hash', '1987-08-01 00:00:00', 'home', 'phone', '5142970818', 'address2','address3','address4','address5');
 Query OK, 2 rows affected (0.01 sec)
@@ -45,4 +52,8 @@ mysql> SELECT * FROM Entry;
 +----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
 3 rows in set (0.00 sec)
 
+<<<<<<< HEAD
 mysql>
+=======
+mysql> hi
+>>>>>>> 0a75004d2ccc12e318ae5b47017ff43e05108349
