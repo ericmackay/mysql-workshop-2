@@ -1,0 +1,43 @@
+Exercise 4
+
+Modify the decodemtl_addressbook.Account row
+Modify the decodemtl_addressbook.AddressBook row
+Modify the three decodemtl_addressbook.Entry rows using one query only
+
+
+mysql> INSERT INTO Account (email,password) VALUES ('ericmackay@gmail.com','pineapple');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM Account;
++----+----------------------+-----------+-----------+------------+
+| id | email                | password  | createdOn | modifiedOn |
++----+----------------------+-----------+-----------+------------+
+|  1 | ericmackay@gmail.com | pineapple | NULL      | NULL       |
++----+----------------------+-----------+-----------+------------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO AddressBook (accountId,name) VALUES ('1','Eric MacKay');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM AddressBook;
++----+-----------+-------------+-----------+------------+
+| id | accountId | name        | createdOn | modifiedOn |
++----+-----------+-------------+-----------+------------+
+|  1 |         1 | Eric MacKay | NULL      | NULL       |
++----+-----------+-------------+-----------+------------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO Entry (addressBookId, firstName, lastName, birthday, type, subtype,
+    contentLineOne,contentLineTwo, contentLineThree, contentLineFour, contentLineFive) VALUES 
+      ('4','ekksks','kasjd', '1987-08-01 00:00:00', 'home', 'phone', '222222222', 'address2','address3','address4','address5'),
+    ('5','ekksks','kasjd', '1987-08-01 00:00:00', 'home', 'phone', '5142970818', 'address2','address3','address4','address5'),
+    ('6','as','hash', '1987-08-01 00:00:00', 'home', 'phone', '5142970818', 'address2','address3','address4','address5');
+
+mysql> SELECT * FROM Entry;
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | AddressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |             4 | ekksks    | kasjd    | 1987-08-01 00:00:00 | home | phone   | 222222222      | address2       | address3         | address4        | address5        |
+|  2 |             5 | ekksks    | kasjd    | 1987-08-01 00:00:00 | home | phone   | 5142970818     | address2       | address3         | address4        | address5        |
+|  3 |             6 | as        | hash     | 1987-08-01 00:00:00 | home | phone   | 5142970818     | address2       | address3         | address4        | address5        |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+----
